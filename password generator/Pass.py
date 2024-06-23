@@ -12,6 +12,7 @@ def generate_password(length=12, include_uppercase=True, include_numbers=True, i
     
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
+    # 
 
 def check_password_strength(password):
     strength = "Weak"
