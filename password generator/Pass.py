@@ -15,8 +15,9 @@ def generate_password(length=12, include_uppercase=True, include_numbers=True, i
 
 def check_password_strength(password):
     strength = "Weak"
-    if len(password) >= 8 and any(c.islower() for c in password) and any(c.isupper() for c in password) and any(c.isdigit() for c in password) and any(c in string.punctuation for c in password):
+    if len(password) >= 8  and any(c.islower() for c in password) and any(c.isupper() for c in password) and any(c.isdigit() for c in password) and any(c in string.punctuation for c in password):
         strength = "Strong"
+        
     elif len(password) >= 6 and (any(c.islower() for c in password) or any(c.isupper() for c in password)) and any(c.isdigit() for c in password):
         strength = "Medium"
     return strength
